@@ -1,6 +1,6 @@
 {
   "name": "easy-rbac-sync",
-  "version": "3.1.1",
+  "version": "1.0.0",
   "description": "Synchronous RBAC implementation for Node.js",
   "main": "lib/rbac.js",
   "scripts": {
