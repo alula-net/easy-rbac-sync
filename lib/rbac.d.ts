@@ -1,6 +1,6 @@
 export interface IWhenConfig {
     name: string;
-    when<T>(params: T): boolean | Promise<boolean>;
+    when<T>(params: T): boolean;
 }
 export interface IRoleConfig {
     can: Array<string | IWhenConfig>;
