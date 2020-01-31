@@ -1,29 +1,33 @@
 {
-  "name": "easy-rbac",
+  "name": "easy-rbac-sync",
   "version": "3.1.1",
-  "description": "RBAC implementation for Node.js",
+  "description": "Synchronous RBAC implementation for Node.js",
   "main": "lib/rbac.js",
   "scripts": {
-    "test": "mocha test/*"
+    "test": "mocha test/*",
+    "test:debug": "node --inspect --inspect-brk node_modules/mocha/bin/_mocha test/*",
+    "prepack": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DeadAlready/easy-rbac.git"
+    "url": "git@github.com:jonjaques/easy-rbac-sync.git"
   },
   "keywords": [
     "rbac"
   ],
-  "author": "Karl Düüna",
+  "author": "Karl Düüna, Jon Jaques",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DeadAlready/easy-rbac/issues"
+    "url": "https://github.com/jonjaques/easy-rbac-sync/issues"
   },
-  "homepage": "https://github.com/DeadAlready/easy-rbac#readme",
+  "homepage": "https://github.com/jonjaques/easy-rbac-sync#readme",
   "dependencies": {
     "debug": "^2.2.0"
   },
   "devDependencies": {
-    "mocha": "^2.3.3"
+    "@types/debug": "^4.1.5",
+    "mocha": "^2.3.3",
+    "typescript": "^3.7.5"
   },
   "engines": {
     "node": ">=8.0"
