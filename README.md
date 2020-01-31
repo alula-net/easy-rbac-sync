@@ -93,69 +93,24 @@ After initialization you can use the `can` function of the object to check if ro
 The function will return a Promise that will resolve if the role can access the operation or reject if something goes wrong
 or the user is not allowed to access.
 
-    rbac.can('user', 'post:add')
-      .then(result => {
-        if (result) {
-          // we are allowed access
-        } else {
-          // we are not allowed access
-        }
-      })
-      .catch(err => {
-        // something else went wrong - refer to err object
-      });
+    const answer = rbac.can('user', 'post:add')
+    // true | false
 
 The function accepts parameters as the third parameter, it will be used if there is a `when` type operation in the validation
 hierarchy.
 
-    rbac.can('user', 'post:save', {userId: 1, ownerId: 2})
-      .then(result => {
-        if (result) {
-          // we are allowed access
-        } else {
-          // we are not allowed access
-        }
-      })
-      .catch(err => {
-        // something else went wrong - refer to err object
-      });
+    const answer = rbac.can('user', 'post:save', {userId: 1, ownerId: 2})
+    // true | false
 
 You can also validate multiple roles at the same time, by providing an array of roles.
 
-    	rbac.can(['user', 'manager'], 'post:save', {userId: 1, ownerId: 2})
-      .then(result => {
-        if (result) {
-          // we are allowed access
-        } else {
-          // we are not allowed access
-        }
-      })
-      .catch(err => {
-        // something else went wrong - refer to err object
-      });
-
-If the options of the initialization is then it will wait for the initialization to resolve before resolving
-any checks.
-
-    const rbac = require('easy-rbac')
-      .create(() => opts);
-
-    rbac.can('user', 'post:add')
-      .then(result => {
-        if (result) {
-          // we are allowed access
-        } else {
-          // we are not allowed access
-        }
-      })
-      .catch(err => {
-        // something else went wrong - refer to err object
-      });
+    const answer = rbac.can(['user', 'manager'], 'post:save', {userId: 1, ownerId: 2})
+    // true | false
 
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2015 Karl Düüna
+Copyright (c) 2015 Karl Düüna, Jon Jaques
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
