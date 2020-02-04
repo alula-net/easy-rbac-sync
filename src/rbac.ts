@@ -127,7 +127,11 @@ export default class RBAC {
     return map;
   }
 
-  public can(role: string | string[], operation: string, params: any): boolean {
+  public can(
+    role: string | string[],
+    operation: string,
+    params?: any
+  ): boolean {
     if (Array.isArray(role)) {
       debug("array of roles, try all");
       return role.some(r => this.can(r, operation, params));

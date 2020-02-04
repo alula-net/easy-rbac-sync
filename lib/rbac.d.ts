@@ -18,5 +18,5 @@ export default class RBAC {
     static create(opts: IRBACConfig): RBAC;
     constructor(roles: IRBACConfig);
     private parseRoleMap;
-    can(role: string | string[], operation: string, params: any): boolean;
+    can(role: string | string[], operation: string, params?: any): boolean;
 }
