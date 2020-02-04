@@ -4,7 +4,7 @@ const debug = Debug("rbac");
 
 export interface IWhenConfig {
   name: string;
-  when<T>(params: T): boolean;
+  when(params: any): boolean;
 }
 
 export interface IRoleConfig {
