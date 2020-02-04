@@ -1,6 +1,6 @@
 {
-  "name": "easy-rbac-sync",
-  "version": "1.0.3",
+  "name": "@alula/easy-rbac-sync",
+  "version": "1.0.4",
   "description": "Synchronous RBAC implementation for Node.js",
   "main": "lib/rbac.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jonjaques/easy-rbac-sync.git"
+    "url": "git@github.com:alula-net/easy-rbac-sync.git"
   },
   "keywords": [
     "rbac"
@@ -18,9 +18,9 @@
   "author": "Karl Düüna, Jon Jaques",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonjaques/easy-rbac-sync/issues"
+    "url": "https://github.com/alula-net/easy-rbac-sync/issues"
   },
-  "homepage": "https://github.com/jonjaques/easy-rbac-sync#readme",
+  "homepage": "https://github.com/alula-net/easy-rbac-sync#readme",
   "dependencies": {
     "debug": "^4.1.1"
   },
@@ -28,6 +28,10 @@
     "@types/debug": "^4.1.5",
     "mocha": "^7.0.1",
     "typescript": "^3.7.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://alula-npm.herokuapp.com/"
   },
   "engines": {
     "node": ">=8.0"
